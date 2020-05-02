@@ -27,7 +27,7 @@ class MatchBoardDefault extends Migration
     
             $board_default_string = json_encode($board_default);
 
-            $table->text('board')->default($board_default_string)->change();
+            $table->string('board', 1024)->default($board_default_string)->change();
         });
     }
 

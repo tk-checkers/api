@@ -58,6 +58,8 @@ class MatchController extends Controller
             ]);
 
             $match->save();
+
+            $match->refresh();
         }
 
         return new MatchResource($match);
